@@ -6,11 +6,11 @@
 
     <div class="menu">
       <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/products/">Product</a></li>
+        <li><a href="{% url 'home' %}">Home</a></li>
+        <li><a href="{% url 'products' %}">Product</a></li>
         <li><a href="#">History</a></li>
-        <li><a href="/products/">Showroom</a></li>
-        <li><a href="/contacts/">Contact</a></li>
+        <li><a href="{% url 'products' %}">Showroom</a></li>
+        <li><a href="{% url 'contacts' %}">Contact</a></li>
         <li><a href="#" class="search"><img src="{% static '/img/search.png' %}" alt="Search"></a></li>
       </ul>
     </div>

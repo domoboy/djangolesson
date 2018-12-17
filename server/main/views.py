@@ -10,8 +10,8 @@ def contacts_view(request):
     return render(request, 'main/contacts.html')
 
 
-# def prod_view(request):
-#     return render(request, 'main/products.html')
+def contact_view(request):
+    return render(request, 'main/contacts.html')
 
 
 def prod_deails_view(request):
