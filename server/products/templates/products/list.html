@@ -1,0 +1,58 @@
+{% extends 'master.html' %}
+{% load staticfiles %}
+
+
+{% block page_title %}
+Эксклюзивная мебель в Москве. Звоните в любое время дня и ночи.
+{% endblock%}
+
+{% block page_content %}
+
+
+    <div class="all-products">
+      <div class="prod-menu">
+        <ul>
+          <li id="underscore"><a href="#">All</a></li>
+          <li id="underscore"><a href="#">Home</a></li>
+          <li id="underscore"><a href="#">Office</a></li>
+          <li><a href="#">Furniture</a></li>
+          <li><a href="#">Modern</a></li>
+          <li><a href="#">Classic</a></li>
+        </ul>
+      </div>
+
+        <div class="prod-link">
+          {% for el in products %}
+          <a href="/products/{{ forloop.counter0 }}"><img src="{% static el.img_big %}" width="370px" alt=""></a>
+          {% endfor %}
+        </div>
+
+
+
+      <div class="reload">
+        <img src="/static/img/reload.svg" alt="">
+      </div>
+
+    </div>
+
+    <div class="promo-product">
+      <div class="promo-content-1">
+        <div class="text-block">
+          <h3>Exclusive</h3>
+          <h1>Fishnet&nbsp;Chair</h1>
+          <p>Seat and back with upholstery made of cold cure foam. Steel frame, available in 	matt</p>
+          <a href="/product-deails/">Order us</a>
+        </div>
+      </div>
+      <div class="promo-content-2">
+        <div class="text-block">
+          <h3>Exclusive</h3>
+          <h1>Fishnet&nbsp;Chair</h1>
+          <p>Seat and back with upholstery made of cold cure foam. Steel frame, available in 	matt</p>
+          <a href="/product-deails/">Order us</a>
+        </div>
+      </div>
+    </div>
+
+
+{% endblock %}

@@ -1,0 +1,64 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>{% block page_title %}{% endblock%}</title>
+	<link rel="stylesheet" href="{% static '/css/style.css' %}">
+</head>
+<body>
+	<div class="container">
+
+    {% include 'includes/menu.html' %}
+
+<!-- ЗДЕСЬ ЖИВУТ УНИКАЛЬНЫЕ БЛОКИ -->
+    <div ​class​="​container​">{% block page_content %}{% endblock %}</​div​>
+
+		<div class="clr-layer-120"></div>
+
+		<div class="footer">
+			<div class="contact">
+				<h3>Contact Us</h3>
+				<p>132A Bridge Road Richmond VIC Australia. <br><br> Talk to us on 1300 132 <br> info@interior.com</p>
+			</div>
+			<div class="info">
+				<h3>Useful information</h3>
+				<ul>
+					<li><a href="#">Sales term</a></li>
+					<li><a href="#">Customer care</a></li>
+					<li><a href="#">Delivery</a></li>
+				</ul>
+				<ul class="end-list">
+					<li><a href="#">Architet accounts</a></li>
+					<li><a href="#">Careers</a></li>
+					<li><a href="#">Exchanges &amp; Returns</a></li>
+				</ul>
+			</div>
+			<div class="subscribe">
+				<h3>Let's stay in touch!</h3>
+				<p>Suscribe to know about our latest news, products and special offers just for suscribers.</p>
+				<input type="text" placeholder="your email adress">
+			</div>
+
+			<div class="copyright">
+				<div class="copyright-links">
+					<p>&copy; Copyright - Interior 2016, All rights reserved.</p>
+				</div>
+				<div class="soc-btn">
+					<a href="#"><img src="{% static '/img/facebook.svg' %}" alt=""></a>
+					<a href="#"><img src="{% static '/img/twitter.svg' %}" alt=""></a>
+					<a href="#"><img src="{% static '/img/google.svg' %}" alt=""></a>
+					<a href="#"><img src="{% static '/img/pinterest.svg' %}" alt=""></a>
+				</div>
+				<div class="copyright-info">
+					<p>{% now ​"Y"​ %} Terms &amp; Conditions / Privacy Policy &amp; Coocies</p>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+
+</body>
+</html>

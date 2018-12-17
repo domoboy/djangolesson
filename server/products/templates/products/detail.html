@@ -1,0 +1,45 @@
+{% extends 'master.html' %}
+{% load staticfiles %}
+
+{% block page_title %}
+Купить недорого {{ object.title }}
+{% endblock%}
+
+{% block page_content %}
+
+  {% if object %}
+        <div class="menu-link">
+          <div class="prod-menu">
+            <ul>
+              <li><a href="#">All</a></li>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Office</a></li>
+              <li><a href="#">Furniture</a></li>
+              <li><a href="#">Modern</a></li>
+              <li><a href="#">Classic</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="prod-deails">
+          <div class="img-deails">
+            <a href="{% static object.img_big %}" target="_blank"><img src="{% static object.img_big %}" alt=""></a>
+            <div class="controll">
+              <a href="#"><img src="{% static object.img_s_1 %}" alt="" class="active"></a>
+              <a href="#"><img src="{% static object.img_s_2 %}" alt="" class="active"></a>
+              <a href="#"><img src="{% static object.img_s_3 %}" alt="" class="active"></a>
+            </div>
+          </div>
+          <div class="txt-deails">
+            <h2>{{ object.title }}</h2>
+            <h3>Hot deal</h3>
+            <p class="price">&#x20bd; <span>{{ object.price }}</span></p>
+            <a href="#">Купить</a>
+            <p class="full-txt">{{ object.description }}</p>
+          </div>
+        </div>
+      {% else %}
+      <h3 style="text-align: center; padding-top: 100px;">Product does not exists</h3>
+  {% endif %}
+
+{% endblock %}
