@@ -1,0 +1,18 @@
+{% load staticfiles %}
+
+{% block top_menu %}
+  <div class="navbar">
+    <a href="/"><img src="{% static '/img/logo.png' %}" alt="logo" class="logo"></a>
+
+    <div class="menu">
+      <ul>
+        <li><a href="{% url 'home' %}">Home</a></li>
+        <li><a href="{% url 'products:products' %}">Product</a></li>
+        <li><a href="#">History</a></li>
+        <li><a href="{% url 'products:products' %}">Showroom</a></li>
+        <li><a href="{% url 'contacts' %}">Contact</a></li>
+        <li><a href="#" class="search"><img src="{% static '/img/search.png' %}" alt="Search"></a></li>
+      </ul>
+    </div>
+  </div>
+{% endblock %}

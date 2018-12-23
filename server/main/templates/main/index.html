@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{% load staticfiles %}
 <html>
 <head>
 	<meta charset="UTF-8">
@@ -21,7 +21,7 @@
 					<li><a href="/products/">Showroom</a></li>
 					<li><a href="/contacts/">Contact</a></li>
 					<li><a href="#" class="search"><img src="/static/img/search.png" alt="Search"></a></li>
-				</ul>	
+				</ul>
 			</div>
 
 			<div class="header-text">
@@ -46,7 +46,7 @@
 					<li><a href="#">New</a></li>
 				</ul>
 			</div>
-			
+
 			<a href="/products/" class="explore">Explore all &nbsp;<img src="/static/img/arrow.png" alt="" class="arrow"></a>
 
 			<div class="prod_cont">
@@ -144,6 +144,9 @@
 					<a href="/product-deails/">Order us</a>
 				</div>
 			</div>
+			<!-- {% for el in products|slice:":5" %}
+    		<a href="/products/{{ forloop.counter0 }}"><img src="{% static el.img_big %}" alt=""></a>
+			{% endfor %} -->
 			<a href="/product-deails/"><img src="/static/img/product-2-sm.png" alt=""></a>
 			<a href="/product-deails/"><img src="/static/img/product-3-sm.png" alt=""></a>
 			<a href="/product-deails/"><img src="/static/img/product-4-sm.png" alt=""></a>
