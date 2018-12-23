@@ -23,7 +23,7 @@
 
         <div class="prod-link">
           {% for el in products %}
-          <a href="/products/{{ forloop.counter0 }}"><img src="{% static el.img_big %}" width="370px" alt=""></a>
+          <a href="{% url 'products:detail' pk=el.id %}"><img src="{{ el.img_big.url }}" alt="{{ el.short_desc }}" width="370px" alt=""></a>
           {% endfor %}
         </div>
 

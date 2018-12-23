@@ -1,30 +1,11 @@
 from django.shortcuts import render
 import json
+from .models import CategoryProduct, Product
 
 
 def list_view(request):
-    with open('data.json', 'r') as file:
-        context = json.load(file)
-
-    return render(
-        request,
-        'products/list.html',
-        {
-            'products': context.get('products') or []
-        }
-    )
+    return render(request, 'products/list.html', {'products': Product.objects.all()})
 
 
 def detail_view(request, pk):
-    with open('data.json', 'r') as file:
-        context = json.load(file)
-
-        products = context.get('products')
-
-    return render(
-        request,
-        'products/detail.html',
-        {
-            'object': products[pk] if len(products) > pk else ''
-        }
-    )
+    return render(request, 'products/detail.html', {'object': Product.objects.get(id=pk)})

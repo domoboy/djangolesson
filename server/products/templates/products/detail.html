@@ -23,11 +23,11 @@
 
         <div class="prod-deails">
           <div class="img-deails">
-            <a href="{% static object.img_big %}" target="_blank"><img src="{% static object.img_big %}" alt=""></a>
+            <a href="{{ object.img_big.url }}" target="_blank"><img src="{{ object.img_big.url }}" alt=""></a>
             <div class="controll">
-              <a href="#"><img src="{% static object.img_s_1 %}" alt="" class="active"></a>
-              <a href="#"><img src="{% static object.img_s_2 %}" alt="" class="active"></a>
-              <a href="#"><img src="{% static object.img_s_3 %}" alt="" class="active"></a>
+              <a href="#"><img src="{{ object.img_s_1.url }}" alt="" class="active"></a>
+              <a href="#"><img src="{{ object.img_s_2.url }}" alt="" class="active"></a>
+              <a href="#"><img src="{{ object.img_s_3.url }}" alt="" class="active"></a>
             </div>
           </div>
           <div class="txt-deails">
