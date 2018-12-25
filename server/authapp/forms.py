@@ -7,7 +7,7 @@ class LoginForm(forms.Form):
         max_length=150,
         widget=forms.widgets.TextInput(
             attrs={
-                        'class': 'field field-password'
+                        'class': 'field field-login'
                     }
         )
     )
