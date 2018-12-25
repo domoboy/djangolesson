@@ -190,7 +190,7 @@ body {
 	color:  #6c6c6c;
 	font-size: 18px;
 	padding: 0px 27px 15px 5px;
-	
+
 }
 
 .prod-menu li a:hover {
@@ -247,7 +247,7 @@ body {
 	padding: 0 10px 2px 5px;
 	color: #212121;
 	border-bottom: 3px solid #212121;
-}	
+}
 
 .tab-controll .modern {
 	padding: 0 10px 2px 5px;
@@ -338,7 +338,7 @@ body {
 	margin-left: 110px;
 	margin-top: 62px;
 	display: block;
-	margin-bottom: 19px; 
+	margin-bottom: 19px;
 }
 
 .product img {
@@ -897,7 +897,7 @@ body {
 	height: 117px;
 }
 
-input[type="text"] {
+.footer input[type="text"] {
 	height: 44px;
 	width: 348px;
 	color:  #6c6c6c;
@@ -953,12 +953,3 @@ input[type="text"] {
 .copyright-info {
 	float: right;
 }
-
-
-
-
-
-
-
-
-

@@ -99,7 +99,7 @@ class Product(models.Model):
     # user_name = models.CharField(max_length=128, verbose_name='Имя заказчика')
     # Телефон заказчика
     # phone = models.CharField(max_length=32, verbose_name='телефон заказчика')
-    # datatime =  # Время заказа
+    # datatime =  models.DateTimeField(auto_now_add=True)
 
 
 # Класс заказа товара
