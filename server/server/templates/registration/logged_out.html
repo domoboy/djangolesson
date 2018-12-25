@@ -1,0 +1,9 @@
+{% extends 'master.html' %}
+{% load staticfiles %}
+{% block page_content %}
+
+  <h3 style="text-align: center; padding-top: 100px;">Выход!</h3>
+  <p>Logged out!</p>
+
+  <a href="{% url 'login' %}">Нажмите если хотите опять войти.</a>
+{% endblock %}
