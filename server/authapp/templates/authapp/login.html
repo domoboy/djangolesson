@@ -1,0 +1,16 @@
+{% extends 'master.html' %}
+{% load staticfiles %}
+
+{% block page_content %}
+  <h3 style="text-align: center; padding-top: 100px;">Войдите</h3>
+    <form class="" action="{% url 'authapp:login' %}" method="post">
+      {% csrf_token %}
+      {% for field in form %}
+        <div class="field-group">
+          <label for="{{ field.name }}">{{ field.label }}</label>
+          {{ field }}
+        </div>
+      {% endfor %}
+      <input type="submit" class='field-submit' name="" value="Войти">
+    </form>
+{% endblock %}
