@@ -6,6 +6,5 @@ app_name = 'authapp'
 
 
 urlpatterns = [
-    path('', login_view, name='login'),
-    #path(),
+    path('', login_view, name='login')
 ]

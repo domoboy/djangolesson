@@ -1,0 +1,33 @@
+{% extends 'master.html' %}
+{% load staticfiles %}
+
+{% block page_content %}
+
+  {% if form.errors %}
+      <h3 style="text-align: center; padding-top: 100px;">Ошибка!</h3>
+       <p>Имя пользователя или пароль не совпадают. Пожайлуста, попробуйте еще раз</p>
+  {% endif %}
+
+  {% if next %}
+    {% if user.is_authenticated %}
+    <p>Ваша учетная запись не имеет доступа к данному разделу. Для продолжения,
+       войдите под той учетной записью, которая имеет доступ.</p>
+    {% else %}
+    <p>Пожайлуста войдите, чтобы увидить содержимое данной страницы.</p>
+    {% endif %}
+  {% endif %}
+
+  <h3 style="text-align: center; padding-top: 100px;">Войдите</h3>
+    <form class="" action="{% url 'authapp:login' %}" method="post">
+      {% csrf_token %}
+      {% for field in form %}
+        <div class="field-group">
+          <label for="{{ field.name }}">{{ field.label }}</label>
+          {{ field }}
+        </div>
+      {% endfor %}
+      <input type="submit" class='field-submit' name="" value="Войти">
+    </form>
+    {# сначала надо настроить представление в urls.py для {% url 'password_resset' %} #}
+    <p><a href="#">Забыли пароль?</a></p>
+{% endblock %}
